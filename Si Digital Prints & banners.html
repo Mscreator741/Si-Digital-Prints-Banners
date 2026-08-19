@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Si Digital Prints & Banner Design - Premium Digital Printing, Branding and Signage">
+  <title>Si Digital Prints & Banner Design</title>
+<body>
+  <video src="C:\Users\USERE\Downloads\files creativity.mp4" width="1350" height="850" controls loop autoplay muted loop playsinline></video>
+   <body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #6c2cff;
+      --secondary: #00d4ff;
+      --dark: #0b0b16;
+      --card: #151526;
+      --text: #ffffff;
+      --muted: #b7b7c9;
+      --success: #20d889;
+      --danger: #ff4d67;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 11, 22, .88);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-container {
+      max-width: 1250px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .logo span {
+      color: var(--secondary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .cart-button {
+      border: none;
+      background: linear-gradient(135deg,var(--primary),var(--secondary));
+      color: white;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cart-count {
+      background: white;
+      color: var(--primary);
+      padding: 2px 7px;
+      border-radius: 50%;
+      margin-left: 4px;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 150px 7% 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(108,44,255,.35), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(0,212,255,.25), transparent 35%);
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg,#fff,var(--secondary),#b879ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg,var(--primary),var(--secondary));
+      color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.3);
+      color: white;
+      background: transparent;
+    }
+
+    .hero-animation {
+      width: 450px;
+      height: 450px;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 0 70px rgba(108,44,255,.35);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .hero-animation img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-18px) rotate(1deg); }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    /* ZIGZAG */
+    .zigzag {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      margin: 70px auto;
+      max-width: 1150px;
+    }
+
+    .zigzag:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .zigzag-image {
+      flex: 1;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+
+    .zigzag-image img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: .6s;
+    }
+
+    .zigzag-image:hover img {
+      transform: scale(1.08);
+    }
+
+    .zigzag-content {
+      flex: 1;
+    }
+
+    .zigzag-content h3 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .zigzag-content p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* CARDS */
+    .grid {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: linear-gradient(145deg,#19192c,#10101d);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: .35s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0,212,255,.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: var(--secondary);
+    }
+
+    /* CART */
+    .cart-panel {
+      position: fixed;
+      right: -430px;
+      top: 0;
+      width: 420px;
+      max-width: 95%;
+      height: 100vh;
+      background: #10101d;
+      z-index: 2000;
+      padding: 25px;
+      transition: .4s;
+      box-shadow: -20px 0 50px rgba(0,0,0,.5);
+      overflow-y: auto;
+    }
+
+    .cart-panel.active {
+      right: 0;
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .close {
+      background: var(--danger);
+      border: none;
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .cart-item img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .quantity {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .quantity button {
+      width: 25px;
+      height: 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove {
+      background: var(--danger);
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cart-total {
+      margin-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding-top: 20px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    .grand-total {
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+
+    /* LOGIN */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      backdrop-filter: blur(8px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      width: 420px;
+      max-width: 100%;
+      background: #161626;
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .modal-box h2 {
+      margin-bottom: 25px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: #0d0d18;
+      color: white;
+      outline: none;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 25px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      background: var(--card);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-top: 10px;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 50px 7%;
+      text-align: center;
+      background: #07070e;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    footer p {
+      color: var(--muted);
+      margin: 8px;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: 1s;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media(max-width: 850px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0b0b16;
+        flex-direction: column;
+        padding: 25px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-animation {
+        width: 90vw;
+        height: 90vw;
+        max-width: 450px;
+        max-height: 450px;
+      }
+
+      .zigzag,
+      .zigzag:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .zigzag-image,
+      .zigzag-content {
+        width: 100%;
+      }
+
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">SI <span>Digital Prints</span></div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#pages">Pages</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" onclick="openLogin()">User Login</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
+      <li>
+        <button class="cart-button" onclick="toggleCart()">
+          🛒 Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </li>
+    </ul>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content reveal">
+    <h1>
+      Print Your
+      <span class="gradient-text">Ideas.</span>
+      Build Your
+      <span class="gradient-text">Brand.</span>
+    </h1>
+
+    <p>
+      Premium digital printing, banners, signage, branding,
+      custom apparel and creative design solutions from
+      Si Digital Prints & Banner Design.
+    </p>
+
+    <div class="buttons">
+      <a href="#shop" class="btn btn-primary">Shop Now</a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+  </div>
+
+  <div class="hero-animation">
+    <img
+      src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1000&q=85"
+      alt="Digital Design">
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+
+  <div class="section-title reveal">
+    <h2>Our <span class="gradient-text">Services</span></h2>
+    <p>Professional printing and branding solutions.</p>
+  </div>
+
+  <div class="zigzag reveal">
+    <div class="zigzag-image">
+      <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85">
+    </div>
+    <div class="zigzag-content">
+      <h3>Creative Branding</h3>
+      <p>
+        Build a powerful brand identity with professional logo,
+        business card, brochure and promotional designs.
+      </p>
+      <a href="#shop" class="btn btn-primary">View Products</a>
+    </div>
+  </div>
+
+  <div class="zigzag reveal">
+    <div class="zigzag-image">
+      <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=1200&q=85">
+    </div>
+    <div class="zigzag-content">
+      <h3>Banner & Signage</h3>
+      <p>
+        High-quality banners, flex prints, acrylic signs,
+        stainless-steel boards and premium business signage.
+      </p>
+      <a href="#shop" class="btn btn-primary">Order Now</a>
+    </div>
+  </div>
+
+  <div class="zigzag reveal">
+    <div class="zigzag-image">
+      <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=85">
+    </div>
+    <div class="zigzag-content">
+      <h3>Custom T-Shirt Printing</h3>
+      <p>
+        Create personalized T-shirts for companies, events,
+        teams, celebrations and promotional campaigns.
+      </p>
+      <a href="#shop" class="btn btn-primary">Customize</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+
+  <div class="section-title reveal">
+    <h2>Digital <span class="gradient-text">Print Shop</span></h2>
+    <p>Choose a product and add it directly to your live cart.</p>
+  </div>
+
+  <div class="grid" id="productGrid"></div>
+
+</section>
+
+<!-- PAGES -->
+<section id="pages">
+
+  <div class="section-title">
+    <h2>Why Choose <span class="gradient-text">SI Digital?</span></h2>
+    <p>Professional quality from design to final print.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-body">
+        <h3>⚡ Fast Service</h3>
+        <p>Quick turnaround for urgent printing and branding requirements.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3>💎 Premium Quality</h3>
+        <p>Professional printing with high-quality materials and finishing.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3>🎨 Creative Design</h3>
+        <p>Modern graphic design solutions for personal and business needs.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3>🚚 Reliable Delivery</h3>
+        <p>Safe and reliable order processing from purchase to delivery.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="section-title">
+    <h2>Contact <span class="gradient-text">SI Digital</span></h2>
+    <p>Let's create something amazing together.</p>
+  </div>
+
+  <div class="contact-box">
+
+    <div class="contact-card">
+      <h3>📍 Location</h3>
+      <p>Si Digital Prints & Banner Design<br>
+      Your Business Address<br>
+      No 171, Devarajan Complex, Near Eagle Mobile & Dell Showroom,
+      Opposite GRT Jewellery, G S T Road, Guduvanchery, Guduvanchery, 
+      Chengalpattu-603202, Tamil Nadu</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>📞 Contact</h3>
+      <p>Phone: 9600408705<br>
+      Email: sidigitalguduvanchery@gmail.com<br>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CART -->
+<div class="cart-panel" id="cartPanel">
+
+  <div class="cart-header">
+    <h2>🛒 Your Cart</h2>
+    <button class="close" onclick="toggleCart()">×</button>
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-total">
+    <div class="total-row">
+      <span>Subtotal</span>
+      <strong>₹<span id="subtotal">0</span></strong>
+    </div>
+
+    <div class="total-row">
+      <span>GST / Tax</span>
+      <strong>₹<span id="tax">0</span></strong>
+    </div>
+
+    <div class="total-row grand-total">
+      <span>Total</span>
+      <span>₹<span id="grandTotal">0</span></span>
+    </div>
+
+    <button class="btn btn-primary" style="width:100%;margin-top:15px" onclick="checkout()">
+      Proceed to Checkout
+    </button>
+
+    <button class="btn btn-outline" style="width:100%;margin-top:10px" onclick="clearCart()">
+      Clear Cart
+    </button>
+  </div>
+
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+
+  <div class="modal-box">
+
+    <h2>👤 User Login</h2>
+
+    <input
+      class="input"
+      id="username"
+      type="text"
+      placeholder="User ID">
+
+    <input
+      class="input"
+      id="password"
+      type="password"
+      placeholder="Password">
+
+    <button
+      class="btn btn-primary"
+      style="width:100%"
+      onclick="login()">
+      Login
+    </button>
+
+    <button
+      class="btn btn-outline"
+      style="width:100%;margin-top:10px"
+      onclick="closeLogin()">
+      Cancel
+    </button>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <h2>SI <span class="gradient-text">Digital Prints</span></h2>
+  <p>Digital Printing • Banner Design • Branding • Signage</p>
+  <p>© 2026 Si Digital Prints & Banner Design. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+  /* PRODUCTS - CRUD DEMO DATA */
+
+  let products = JSON.parse(localStorage.getItem("siProducts")) || [
+
+    {
+      id: 1,
+      name: "Premium Banner",
+      price: 499,
+      image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 2,
+      name: "Business Cards",
+      price: 299,
+      image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 3,
+      name: "Custom T-Shirt",
+      price: 599,
+      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 4,
+      name: "Coffee Mug Printing",
+      price: 349,
+      image: "C:\coffee mug.jpg"
+    },
+
+    {
+      id: 5,
+      name: "Wedding Invitation",
+      price: 799,
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 6,
+      name: "Acrylic Sign Board",
+      price: 1499,
+      image: "https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 7,
+      name: "Poster Printing",
+      price: 199,
+      image: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=800&q=80"
+    },
+
+    {
+      id: 8,
+      name: "Logo Design",
+      price: 999,
+      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
+    }
+
+  ];
+
+  let cart = JSON.parse(localStorage.getItem("siCart")) || [];
+
+  /* PRODUCT DISPLAY */
+
+  function renderProducts() {
+
+    const grid = document.getElementById("productGrid");
+
+    grid.innerHTML = "";
+
+    products.forEach(product => {
+
+      grid.innerHTML += `
+
+        <div class="card reveal">
+
+          <img src="${product.image}" alt="${product.name}">
+
+          <div class="card-body">
+
+            <h3>${product.name}</h3>
+
+            <p>
+              Premium quality ${product.name.toLowerCase()}
+              from Si Digital Prints.
+            </p>
+
+            <div class="price">₹${product.price}</div>
+
+            <button
+              class="btn btn-primary"
+              style="width:100%"
+              onclick="addToCart(${product.id})">
+              Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    });
+
+    revealElements();
+
+  }
+
+  /* ADD TO CART */
+
+  function addToCart(id) {
+
+    const product = products.find(p => p.id === id);
+
+    const existing = cart.find(item => item.id === id);
+
+    if(existing) {
+
+      existing.quantity++;
+
+    } else {
+
+      cart.push({
+        ...product,
+        quantity: 1
+      });
+
+    }
+
+    saveCart();
+
+    updateCart();
+
+    document.getElementById("cartPanel").classList.add("active");
+
+  }
+
+  /* UPDATE CART */
+
+  function updateCart() {
+
+    const container = document.getElementById("cartItems");
+
+    container.innerHTML = "";
+
+    if(cart.length === 0) {
+
+      container.innerHTML = `
+        <p style="color:#aaa;text-align:center;padding:40px">
+          Your cart is empty.
+        </p>
+      `;
+
+    }
+
+    let subtotal = 0;
+
+    cart.forEach(item => {
+
+      subtotal += item.price * item.quantity;
+
+      container.innerHTML += `
+
+        <div class="cart-item">
+
+          <img src="${item.image}">
+
+          <div class="cart-item-info">
+
+            <strong>${item.name}</strong>
+
+            <div>₹${item.price}</div>
+
+            <div class="quantity">
+
+              <button onclick="changeQuantity(${item.id},-1)">−</button>
+
+              <span>${item.quantity}</span>
+
+              <button onclick="changeQuantity(${item.id},1)">+</button>
+
+              <button
+                class="remove"
+                onclick="removeFromCart(${item.id})">
+                ×
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      `;
+
+    });
+
+    const tax = subtotal * .18;
+
+    const total = subtotal + tax;
+
+    document.getElementById("subtotal").textContent =
+      Math.round(subtotal);
+
+    document.getElementById("tax").textContent =
+      Math.round(tax);
+
+    document.getElementById("grandTotal").textContent =
+      Math.round(total);
+
+    document.getElementById("cartCount").textContent =
+      cart.reduce((sum,item) => sum + item.quantity,0);
+
+  }
+
+  /* QUANTITY */
+
+  function changeQuantity(id, amount) {
+
+    const item = cart.find(p => p.id === id);
+
+    if(!item) return;
+
+    item.quantity += amount;
+
+    if(item.quantity <= 0) {
+
+      cart = cart.filter(p => p.id !== id);
+
+    }
+
+    saveCart();
+
+    updateCart();
+
+  }
+
+  /* REMOVE */
+
+  function removeFromCart(id) {
+
+    cart = cart.filter(item => item.id !== id);
+
+    saveCart();
+
+    updateCart();
+
+  }
+
+  /* CLEAR CART */
+
+  function clearCart() {
+
+    cart = [];
+
+    saveCart();
+
+    updateCart();
+
+  }
+
+  /* SAVE CART */
+
+  function saveCart() {
+
+    localStorage.setItem("siCart",JSON.stringify(cart));
+
+  }
+
+  /* CART PANEL */
+
+  function toggleCart() {
+
+    document
+      .getElementById("cartPanel")
+      .classList.toggle("active");
+
+  }
+
+  /* CHECKOUT */
+
+  function checkout() {
+
+    if(cart.length === 0) {
+
+      alert("Your cart is empty.");
+
+      return;
+
+    }
+
+    const user = localStorage.getItem("siUser");
+
+    if(!user) {
+
+      alert("Please login before checkout.");
+
+      openLogin();
+
+      return;
+
+    }
+
+    let total = cart.reduce(
+      (sum,item) => sum + item.price * item.quantity,
+      0
+    );
+
+    total += total * .18;
+
+    alert(
+      "Order created successfully!\\n\\n" +
+      "Customer: " + user +
+      "\\nTotal: ₹" + Math.round(total)
+    );
+
+  }
+
+  /* LOGIN */
+
+  function openLogin() {
+
+    document
+      .getElementById("loginModal")
+      .classList.add("active");
+
+  }
+
+  function closeLogin() {
+
+    document
+      .getElementById("loginModal")
+      .classList.remove("active");
+
+  }
+
+  function login() {
+
+    const username =
+      document.getElementById("username").value.trim();
+
+    const password =
+      document.getElementById("password").value.trim();
+
+    if(!username || !password) {
+
+      alert("Please enter User ID and Password.");
+
+      return;
+
+    }
+
+    localStorage.setItem("siUser",username);
+
+    alert("Welcome, " + username + "!");
+
+    closeLogin();
+
+  }
+
+  /* LOGOUT */
+
+  function logout() {
+
+    localStorage.removeItem("siUser");
+
+    alert("You have been logged out.");
+
+  }
+
+  /* MOBILE MENU */
+
+  function toggleMenu() {
+
+    document
+      .getElementById("navLinks")
+      .classList.toggle("active");
+
+  }
+
+  /* SCROLL REVEAL */
+
+  function revealElements() {
+
+    const elements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+          }
+
+        });
+
+      }, {
+        threshold: .12
+      });
+
+    elements.forEach(el => observer.observe(el));
+
+  }
+
+  /* INITIALIZE */
+
+  renderProducts();
+
+  updateCart();
+
+  revealElements();
+
+</script>
+
+</body>
+</html>
